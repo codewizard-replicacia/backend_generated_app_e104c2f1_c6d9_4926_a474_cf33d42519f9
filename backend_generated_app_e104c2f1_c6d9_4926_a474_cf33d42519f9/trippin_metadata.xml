@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Model">
+            <EntityType HasStream="false" Name="AppPort">
+                <Key>
+                    <PropertyRef Name="App_Id"/>
+                </Key>
+                <Property Name="App_Id" Type="Edm.Int32"/>
+                <Property Name="App_Name" Type="Edm.String"/>
+                <Property Name="Github_URL" Type="Edm.String"/>
+                <Property Name="Service_Name" Type="Edm.String"/>
+                <Property Name="Date" Type="Edm.DateTimeOffset"/>
+                <Property Name="Port_Number" Type="Edm.Int32"/>
+                <Property Name="App_URL" Type="Edm.String"/>
+                <Property Name="Host_IP" Type="Edm.String"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="AppPorts" EntityType="Model.AppPort"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

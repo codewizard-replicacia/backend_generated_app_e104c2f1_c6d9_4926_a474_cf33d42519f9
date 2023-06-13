@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <property name="schemaName" value="generated_app"></property>
+    <property name="author=" value="db-designer"></property>
+    <changeSet id="v1-01-01" author="${author}">
+    
+ <createTable schemaName="${schemaName}" tableName="AppPort">
+	<column name="App_Id" type="SERIAL" autoIncrement="true" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="App_Name" type="VARCHAR(250)" />
+    
+     <column name="Github_URL" type="VARCHAR(250)" />
+    
+     <column name="Service_Name" type="VARCHAR(250)" />
+    
+     <column name="Date" type="TIMESTAMP" />
+    
+     <column name="Port_Number" type="SERIAL" />
+    
+     <column name="App_URL" type="VARCHAR(250)" />
+    
+     <column name="Host_IP" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+	
+
+	
+ 
+	    </changeSet>
+</databaseChangeLog>
